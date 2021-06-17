@@ -42,12 +42,33 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numberPad" enablesReturnKeyAutomatically="YES"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="32" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IZY-b9-CcU">
+                                <rect key="frame" x="30" y="280" width="315" height="70"/>
+                                <fontDescription key="fontDescription" name="KohinoorDevanagari-Regular" family="Kohinoor Devanagari" pointSize="50"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8e2-8V-zmj">
+                                <rect key="frame" x="165.5" y="355" width="44" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FQi-9m-s3Y">
+                                <rect key="frame" x="20" y="617" width="335" height="30"/>
+                                <state key="normal" title="Clear Calculator"/>
+                                <connections>
+                                    <action selector="clearCalculator:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tHa-2p-O8q"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="FQi-9m-s3Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="47W-Ys-9aS"/>
                             <constraint firstItem="oe5-0o-7Pb" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="8XB-bX-wkk"/>
                             <constraint firstItem="EO5-bn-mdV" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="E3g-8v-DzQ"/>
+                            <constraint firstItem="8e2-8V-zmj" firstAttribute="top" secondItem="IZY-b9-CcU" secondAttribute="bottom" constant="5" id="EhH-y7-1Kh"/>
+                            <constraint firstItem="8e2-8V-zmj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="JcC-hb-RqS"/>
                             <constraint firstItem="sis-CZ-XP2" firstAttribute="leading" secondItem="3tJ-t9-kXp" secondAttribute="leading" id="QfU-gG-GFS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sis-CZ-XP2" secondAttribute="trailing" constant="30" id="QgU-jR-ZBS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="3tJ-t9-kXp" secondAttribute="trailing" constant="30" id="Rla-A2-fe1"/>
@@ -58,13 +79,20 @@
                             <constraint firstItem="3tJ-t9-kXp" firstAttribute="top" secondItem="oe5-0o-7Pb" secondAttribute="bottom" constant="35" id="fS6-Db-qyd"/>
                             <constraint firstItem="sis-CZ-XP2" firstAttribute="trailing" secondItem="3tJ-t9-kXp" secondAttribute="trailing" id="fpW-QI-UMR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="EO5-bn-mdV" secondAttribute="bottom" id="g42-Q5-zOY"/>
+                            <constraint firstItem="IZY-b9-CcU" firstAttribute="width" secondItem="sis-CZ-XP2" secondAttribute="width" id="iZc-Eq-N0t"/>
                             <constraint firstItem="sis-CZ-XP2" firstAttribute="top" secondItem="3tJ-t9-kXp" secondAttribute="bottom" constant="25" id="j4H-F5-1e3"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="FQi-9m-s3Y" secondAttribute="trailing" constant="20" id="mwH-BY-Wh7"/>
+                            <constraint firstItem="IZY-b9-CcU" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="q0M-MB-Gye"/>
                             <constraint firstItem="EO5-bn-mdV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="txE-uD-erV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="FQi-9m-s3Y" secondAttribute="bottom" constant="20" id="wDR-yA-OMd"/>
+                            <constraint firstItem="IZY-b9-CcU" firstAttribute="top" secondItem="sis-CZ-XP2" secondAttribute="bottom" constant="45" id="yTE-k5-i4C"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="EO5-bn-mdV" secondAttribute="trailing" id="zI2-jp-nvf"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="hoursLbl" destination="8e2-8V-zmj" id="suv-xt-UMf"/>
                         <outlet property="priceTxt" destination="sis-CZ-XP2" id="3HI-zh-ANJ"/>
+                        <outlet property="resultLbl" destination="IZY-b9-CcU" id="IfP-T1-qke"/>
                         <outlet property="wageTxt" destination="3tJ-t9-kXp" id="I9k-pG-kV6"/>
                     </connections>
                 </viewController>
